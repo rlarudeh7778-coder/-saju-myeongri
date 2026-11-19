@@ -225,6 +225,33 @@ var ZODIAC = {
   new IntersectionObserver(function (es) { applyOn = es[es.length - 1].isIntersecting; upd(); }, { threshold: 0, rootMargin: '0px 0px -30% 0px' }).observe(apply);
 })();
 
+/* ── 휴대폰: 10개 파트 = 한자 타일, 누르면 아래에 한 줄 설명(설명은 PC 카드의 h3·p 를 그대로 읽음) ── */
+var PHONE_MQ = '(max-width: 719.98px)';                      // site.css 「휴대폰 전용」 기준과 같은 값
+(function () {
+  var say = document.getElementById('partSay'); if (!say) return;
+  var parts = [].slice.call(document.querySelectorAll('.parts .part'));
+  var T = document.getElementById('partSayT'), P = document.getElementById('partSayP');
+  function pick(el) {
+    parts.forEach(function (x) { x.classList.toggle('sel', x === el); if (x.hasAttribute('role')) x.setAttribute('aria-pressed', String(x === el)); });
+    T.textContent = el.querySelector('h3').textContent; P.textContent = el.querySelector('p').textContent;
+  }
+  if (window.matchMedia && matchMedia(PHONE_MQ).matches) parts.forEach(function (el) { el.setAttribute('role', 'button'); el.tabIndex = 0; });
+  parts.forEach(function (el) {
+    el.addEventListener('click', function () { pick(el); });
+    el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(el); } });
+  });
+  pick(parts[0]);
+})();
+
+/* ── 휴대폰: 동의 문구는 제목만, 「내용」을 누르면 전문 펼침(체크칸은 건드리지 않음) ── */
+[].forEach.call(document.querySelectorAll('.ag-more'), function (b) {
+  b.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    var open = b.closest('.agree').classList.toggle('open');
+    b.setAttribute('aria-expanded', String(open)); b.textContent = open ? '접기' : '내용';
+  });
+});
+
 /* ── 신청서 (기존 사이트 코드 그대로 옮김 — 접수 메일·입금 안내 동작 동일) ── */
 /* ▼▼ 운영자 설정 ▼▼ */
 const WEB3FORMS_KEY="ef0e3efd-8d61-4ddc-a211-6c9e29435f52"; // web3forms.com Access Key → 신청 내역을 운영자 이메일로 받음

@@ -33,8 +33,8 @@
 /* 처음 들어온 사람에게만 인트로(같은 창에서 다시 오면·주소에 #… 이 있으면·움직임 줄이기면 건너뜀) */
 (function(h){h.className+=' js';try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!location.hash&&!sessionStorage.getItem('rufIntro'))h.className+=' is-intro';}catch(e){}})(document.documentElement);
 </script>
-<link rel="stylesheet" href="/assets/site.css?v=04031627">
-<script src="/assets/site.js?v=791f70f0" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=d9610079">
+<script src="/assets/site.js?v=1f3062b8" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://ruf.co.kr/#org","name":"운명을 읽다","url":"https://ruf.co.kr/","logo":"https://ruf.co.kr/icon-512.png","email":"rlarudeh7778@gmail.com","telephone":"+82-10-7418-0705","sameAs":["http://pf.kakao.com/_gdCGX"]},
@@ -116,16 +116,16 @@
         <p class="h-old">"그냥 내가 운이 없었던 거겠지"</p>
         <p class="h-new">어쩌면, <span class="mk">내 흐름을 몰랐던 것</span>일지도 모릅니다.</p>
       </div>
-      <h1>별이 새긴 당신의 사주,<br><span class="gold-t">천문 계산</span>으로 정확하게 풀어드립니다</h1>
-      <p class="sub">생년월일시 하나로 사주팔자·오행·십성·대운을 정밀하게 산출하고, 올해의 운세부터 재물·애정·직업·건강까지 <b class="gold">10개 파트</b>의 프리미엄 리포트를 받아보세요.</p>
+      <h1><span class="pc-only">별이 새긴 당신의 사주,<br><span class="gold-t">천문 계산</span>으로 정확하게 풀어드립니다</span><span class="m-only">별이 새긴 내 사주,<br><span class="gold-t">정확하게</span> 읽어드려요</span></h1>
+      <p class="sub pc-only">생년월일시 하나로 사주팔자·오행·십성·대운을 정밀하게 산출하고, 올해의 운세부터 재물·애정·직업·건강까지 <b class="gold">10개 파트</b>의 프리미엄 리포트를 받아보세요.</p>
       <div class="cta-row">
         <a href="#apply" class="btn btn-gold">지금 분석 신청하기</a>
         <a href="#ddi" class="btn btn-ghost">내 띠 먼저 보기</a>
       </div>
       <div class="trust">
-        <span class="chip"><b>24절기·합삭</b> 천문 계산 만세력</span>
-        <span class="chip"><b>음력·윤달</b> 자동 변환</span>
-        <span class="chip"><b>PDF·이메일</b> 소장용 리포트</span>
+        <span class="chip"><span class="pc-only"><b>24절기·합삭</b> 천문 계산 만세력</span><span class="m-only"><b>천문</b> 만세력</span></span>
+        <span class="chip"><span class="pc-only"><b>음력·윤달</b> 자동 변환</span><span class="m-only"><b>음력·윤달</b> OK</span></span>
+        <span class="chip"><span class="pc-only"><b>PDF·이메일</b> 소장용 리포트</span><span class="m-only"><b>PDF</b> 소장</span></span>
       </div>
     </div>
   </div>
@@ -133,25 +133,27 @@
 </header>
 
 <section class="sec comfort" id="comfort"><div class="wrap">
-  <div class="cf-head" data-rv><small>FOR YOU</small><h2>요즘, <span class="mk">마음이 조금 무거우셨나요?</span></h2></div>
+  <div class="cf-head" data-rv><small><span class="pc-only">FOR YOU</span><span class="m-only ch">01 · 요즘 당신</span></small><h2>요즘, <span class="mk">마음이 조금 무거우셨나요?</span></h2></div>
   <div class="cf-list">
-    <div class="cf-card" data-rv><span class="cf-ic">🌧</span><p>분명 열심히 했는데, <b>이상하게 일이 자꾸 어긋날 때</b>가 있습니다.</p></div>
-    <div class="cf-card" data-rv><span class="cf-ic">🍂</span><p>믿었던 사람에게 상처받고, <b>관계가 버겁게 느껴질 때</b>도 있지요.</p></div>
-    <div class="cf-card" data-rv><span class="cf-ic">🌫</span><p>이직, 이별, 새로운 시작 앞에서 <b>어느 쪽으로 가야 할지 모르겠을 때</b>도요.</p></div>
+    <div class="cf-card" data-rv><span class="cf-ic">🌧</span><b class="cf-key m-only">자꾸<br>어긋나는 일</b><p class="pc-only">분명 열심히 했는데, <b>이상하게 일이 자꾸 어긋날 때</b>가 있습니다.</p></div>
+    <div class="cf-card" data-rv><span class="cf-ic">🍂</span><b class="cf-key m-only">버거운<br>관계</b><p class="pc-only">믿었던 사람에게 상처받고, <b>관계가 버겁게 느껴질 때</b>도 있지요.</p></div>
+    <div class="cf-card" data-rv><span class="cf-ic">🌫</span><b class="cf-key m-only">어디로 갈지<br>모를 때</b><p class="pc-only">이직, 이별, 새로운 시작 앞에서 <b>어느 쪽으로 가야 할지 모르겠을 때</b>도요.</p></div>
   </div>
   <div class="cf-close" data-rv>
     <p class="big">괜찮아요.<br><span class="mk">지금부터 천천히 가도 늦지 않아요.</span></p>
-    <p class="cf-p">사주는 정해진 결말을 알려주는 것이 아니라, 내가 어떤 기운을 타고났고 <b class="gold">지금 어떤 흐름 위에 서 있는지</b> 비춰주는 지도입니다. 흐름을 알면, 다음 한 걸음을 조금 더 편안한 마음으로 고를 수 있습니다.</p>
-    <a href="#apply" class="btn btn-gold">내 흐름 읽어보기</a>
-    <p class="fine">※ 사주 분석은 삶을 돌아보는 참고용 콘텐츠이며, 특정 결과를 보장하지 않습니다.</p>
+    <p class="cf-m m-only">사주는 정해진 결말이 아니라<br><b class="gold">지금 내 흐름</b>을 비추는 지도예요.</p>
+    <p class="cf-p pc-only">사주는 정해진 결말을 알려주는 것이 아니라, 내가 어떤 기운을 타고났고 <b class="gold">지금 어떤 흐름 위에 서 있는지</b> 비춰주는 지도입니다. 흐름을 알면, 다음 한 걸음을 조금 더 편안한 마음으로 고를 수 있습니다.</p>
+    <a href="#apply" class="btn btn-gold pc-only">내 흐름 읽어보기</a>
+    <a href="#ddi" class="btn btn-gold m-only">먼저, 내 띠부터 보기</a>
+    <p class="fine pc-only">※ 사주 분석은 삶을 돌아보는 참고용 콘텐츠이며, 특정 결과를 보장하지 않습니다.</p>
   </div>
 </div></section>
 
 <section class="sec ddi" id="ddi"><div class="wrap">
   <div class="stitle" data-rv>
-    <p class="k">MY ZODIAC</p>
+    <p class="k"><span class="pc-only">MY ZODIAC</span><span class="m-only ch">02 · 내 띠</span></p>
     <h2>태어난 해만 넣어 보세요</h2>
-    <p>그해의 천간·지지와 나의 띠를 바로 알려드려요</p>
+    <p class="pc-only">그해의 천간·지지와 나의 띠를 바로 알려드려요</p>
   </div>
   <div class="ddi-box" data-rv>
     <form class="ddi-form" id="ddiForm" novalidate>
@@ -166,16 +168,38 @@
         <p class="ddi-gz" id="ddiGz"></p>
         <h3 class="ddi-name" id="ddiName"></h3>
         <p class="ddi-trait" id="ddiTrait"></p>
-        <p class="ddi-hook">띠는 사주 <b>여덟 글자 중 단 한 글자</b>예요.<br>나머지 <b class="gold">일곱 글자</b>에 진짜 당신의 흐름이 있어요.</p>
+        <p class="ddi-hook"><span class="pc-only">띠는 사주 <b>여덟 글자 중 단 한 글자</b>예요.<br>나머지 <b class="gold">일곱 글자</b>에 진짜 당신의 흐름이 있어요.</span><span class="m-only">띠는 사주 <b>8글자 중 1글자</b>.<br>나머지 <b class="gold">7글자</b>가 진짜 나예요.</span></p>
         <a class="btn btn-gold" href="#apply" id="ddiGo">나머지 일곱 글자 읽어보기</a>
-        <p class="ddi-note">※ 띠는 입춘(2월 4일 무렵)에 바뀌어요. 1월~2월 초에 태어났다면 앞 해의 띠일 수 있어요. 재미로 보는 참고용이에요.</p>
+        <p class="ddi-note m-only">※ 입춘(2/4) 전 생일은 앞 해 띠 · 재미로 보는 참고용</p>
+        <p class="ddi-note pc-only">※ 띠는 입춘(2월 4일 무렵)에 바뀌어요. 1월~2월 초에 태어났다면 앞 해의 띠일 수 있어요. 재미로 보는 참고용이에요.</p>
       </div>
     </div>
   </div>
 </div></section>
 
-<section class="sec stats" id="stats"><div class="wrap">
+<section class="sec what" id="what"><div class="wrap">
   <div class="stitle" data-rv>
+    <p class="k"><span class="pc-only">WHAT YOU GET</span><span class="m-only ch">03 · 내 리포트</span></p>
+    <h2><span class="pc-only">프리미엄 10개 파트 심층 리포트</span><span class="m-only">그 일곱 글자를<br><span class="gold-t">10가지 이야기</span>로 풀어요</span></h2>
+    <p class="pc-only">형식적인 한두 줄이 아닌, 각 영역을 풍부하게 풀어낸 진짜 상담형 분석</p>
+  </div>
+  <div class="parts">
+    <div class="part" data-rv><span class="p-han">總</span><b class="p-key m-only">총평</b><span class="p-no">PART 01</span><h3>사주팔자 총평</h3><p>네 기둥(년·월·일·시)의 기운과 일간 중심의 전체 그림</p></div>
+    <div class="part" data-rv><span class="p-han">性</span><b class="p-key m-only">성격</b><span class="p-no">PART 02</span><h3>타고난 성격·기질</h3><p>오행 균형으로 보는 본성과 강점·약점</p></div>
+    <div class="part" data-rv><span class="p-han">五</span><b class="p-key m-only">오행</b><span class="p-no">PART 03</span><h3>오행·십성 분석</h3><p>기운의 분포와 십성(십신)이 말하는 삶의 패턴</p></div>
+    <div class="part" data-rv><span class="p-han">運</span><b class="p-key m-only">대운</b><span class="p-no">PART 04</span><h3>대운의 흐름</h3><p>10년 단위로 펼쳐지는 인생의 큰 물결</p></div>
+    <div class="part" data-rv><span class="p-han">歲</span><b class="p-key m-only">올해</b><span class="p-no">PART 05</span><h3>올해의 운세</h3><p>세운으로 보는 한 해의 기회와 주의점</p></div>
+    <div class="part" data-rv><span class="p-han">財</span><b class="p-key m-only">재물</b><span class="p-no">PART 06</span><h3>재물·금전운</h3><p>돈이 들어오는 길과 타고난 재물의 그릇</p></div>
+    <div class="part" data-rv><span class="p-han">緣</span><b class="p-key m-only">인연</b><span class="p-no">PART 07</span><h3>애정·인연운</h3><p>관계의 결, 그리고 인연이 다가오는 시기</p></div>
+    <div class="part" data-rv><span class="p-han">業</span><b class="p-key m-only">직업</b><span class="p-no">PART 08</span><h3>직업·적성</h3><p>타고난 결에 맞는 일과 커리어 방향</p></div>
+    <div class="part" data-rv><span class="p-han">康</span><b class="p-key m-only">건강</b><span class="p-no">PART 09</span><h3>건강 유의점</h3><p>오행으로 보는 몸의 약한 고리와 관리법</p></div>
+    <div class="part" data-rv><span class="p-han">道</span><b class="p-key m-only">조언</b><span class="p-no">PART 10</span><h3>총정리·조언</h3><p>삶을 풀어가는 핵심 키워드와 실천 제언</p></div>
+  </div>
+  <div class="part-say m-only" id="partSay" aria-live="polite"><b id="partSayT"></b><p id="partSayP"></p></div>
+</div></section>
+
+<section class="sec stats" id="stats"><div class="wrap">
+  <div class="stitle pc-only" data-rv>
     <p class="k">SERVICE</p>
     <h2>한눈에 보는 서비스 안내</h2>
     <p>구성과 가격을 투명하게 알려드립니다</p>
@@ -190,9 +214,9 @@
 <section class="sec reviews" id="reviews">
   <div class="wrap">
     <div class="stitle" data-rv>
-      <p class="k">REVIEWS</p>
-      <h2>먼저 받아보신 분들의 후기</h2>
-      <p>1만 원대로 이 정도라니 — 후기로 확인하세요</p>
+      <p class="k"><span class="pc-only">REVIEWS</span><span class="m-only ch">04 · 후기</span></p>
+      <h2><span class="pc-only">먼저 받아보신 분들의 후기</span><span class="m-only">1만 원대인데<br><span class="gold-t">이런 반응</span>이에요</span></h2>
+      <p class="pc-only">1만 원대로 이 정도라니 — 후기로 확인하세요</p>
     </div>
   </div>
   <div class="rev-rows">
@@ -220,30 +244,11 @@
   <div class="wrap"><p class="rev-disc">※ 위 후기는 실제 고객 의견을 바탕으로 재구성한 <b>예시</b>이며, 분석 결과·만족도는 개인에 따라 다를 수 있습니다.</p></div>
 </section>
 
-<section class="sec what" id="what"><div class="wrap">
-  <div class="stitle" data-rv>
-    <p class="k">WHAT YOU GET</p>
-    <h2>프리미엄 10개 파트 심층 리포트</h2>
-    <p>형식적인 한두 줄이 아닌, 각 영역을 풍부하게 풀어낸 진짜 상담형 분석</p>
-  </div>
-  <div class="parts">
-    <div class="part" data-rv><span class="p-han">總</span><span class="p-no">PART 01</span><h3>사주팔자 총평</h3><p>네 기둥(년·월·일·시)의 기운과 일간 중심의 전체 그림</p></div>
-    <div class="part" data-rv><span class="p-han">性</span><span class="p-no">PART 02</span><h3>타고난 성격·기질</h3><p>오행 균형으로 보는 본성과 강점·약점</p></div>
-    <div class="part" data-rv><span class="p-han">五</span><span class="p-no">PART 03</span><h3>오행·십성 분석</h3><p>기운의 분포와 십성(십신)이 말하는 삶의 패턴</p></div>
-    <div class="part" data-rv><span class="p-han">運</span><span class="p-no">PART 04</span><h3>대운의 흐름</h3><p>10년 단위로 펼쳐지는 인생의 큰 물결</p></div>
-    <div class="part" data-rv><span class="p-han">歲</span><span class="p-no">PART 05</span><h3>올해의 운세</h3><p>세운으로 보는 한 해의 기회와 주의점</p></div>
-    <div class="part" data-rv><span class="p-han">財</span><span class="p-no">PART 06</span><h3>재물·금전운</h3><p>돈이 들어오는 길과 타고난 재물의 그릇</p></div>
-    <div class="part" data-rv><span class="p-han">緣</span><span class="p-no">PART 07</span><h3>애정·인연운</h3><p>관계의 결, 그리고 인연이 다가오는 시기</p></div>
-    <div class="part" data-rv><span class="p-han">業</span><span class="p-no">PART 08</span><h3>직업·적성</h3><p>타고난 결에 맞는 일과 커리어 방향</p></div>
-    <div class="part" data-rv><span class="p-han">康</span><span class="p-no">PART 09</span><h3>건강 유의점</h3><p>오행으로 보는 몸의 약한 고리와 관리법</p></div>
-    <div class="part" data-rv><span class="p-han">道</span><span class="p-no">PART 10</span><h3>총정리·조언</h3><p>삶을 풀어가는 핵심 키워드와 실천 제언</p></div>
-  </div>
-</div></section>
 
 <section class="sec how" id="how"><div class="wrap">
   <div class="stitle" data-rv>
-    <p class="k">HOW IT WORKS</p>
-    <h2>신청부터 받아보기까지</h2>
+    <p class="k"><span class="pc-only">HOW IT WORKS</span><span class="m-only ch">05 · 받는 법</span></p>
+    <h2><span class="pc-only">신청부터 받아보기까지</span><span class="m-only">받는 건,<br><span class="gold-t">4단계</span>면 끝</span></h2>
   </div>
   <ol class="steps">
     <li class="step" data-rv><span class="s-no">1</span><div><h3>신청·결제</h3><p>아래 신청 폼에 생년월일시와 연락처를 입력하고, 안내에 따라 결제합니다.</p></div></li>
@@ -255,14 +260,15 @@
 
 <section class="sec price" id="price"><div class="wrap">
   <div class="stitle" data-rv>
-    <p class="k">PRICING</p>
-    <h2>상품 구성 및 가격 안내</h2>
-    <p>필요한 만큼만 선택해서 신청하세요</p>
+    <p class="k"><span class="pc-only">PRICING</span><span class="m-only ch">06 · 가격</span></p>
+    <h2><span class="pc-only">상품 구성 및 가격 안내</span><span class="m-only">나에게 맞는 걸로<br><span class="gold-t">골라요</span></span></h2>
+    <p class="pc-only">필요한 만큼만 선택해서 신청하세요</p>
   </div>
   <div class="plans">
     <div class="plan" data-rv>
       <h3>기본</h3>
       <div class="pr">19,000<small> 원</small></div>
+      <p class="p-one m-only">핵심 분석 + 올해 운세</p>
       <ul>
         <li>사주팔자·오행 핵심 분석</li>
         <li>성격·기질 리포트</li>
@@ -275,6 +281,7 @@
       <span class="tag">BEST</span>
       <h3>프리미엄</h3>
       <div class="pr">39,000<small> 원</small></div>
+      <p class="p-chips m-only"><span>10개 파트 전체</span><span>대운·세운</span><span>재물·애정·직업·건강</span><span>추가 질문 1회</span></p>
       <ul>
         <li><b class="gold">10개 파트 전체</b> 심층 분석</li>
         <li>대운·세운 흐름 포함</li>
@@ -288,6 +295,7 @@
     <div class="plan" data-rv>
       <h3>궁합</h3>
       <div class="pr">49,000<small> 원</small></div>
+      <p class="p-one m-only">두 사람의 인연 흐름</p>
       <ul>
         <li>두 사람 사주 분석</li>
         <li>오행·십성 상호 작용</li>
@@ -301,6 +309,7 @@
       <span class="tag tag-new">NEW</span>
       <h3>작명·개명</h3>
       <div class="pr">59,000<small> 원</small></div>
+      <p class="p-one m-only">이름 후보 5~7개 + 한자 풀이</p>
       <ul>
         <li>아이/본인 사주로 보완할 기운 분석</li>
         <li>발음·자원오행·수리 고려 추천</li>
@@ -312,14 +321,15 @@
       <a href="#apply" class="btn btn-ghost" onclick="pickPkg('작명')">신청하기</a>
     </div>
   </div>
-  <p class="note center">✦ 한 번의 분석으로 평생 곁에 두는 나만의 운명 지도 — 본 서비스는 명리학 기반 참고용 엔터테인먼트 콘텐츠입니다.</p>
+  <p class="note center pc-only">✦ 한 번의 분석으로 평생 곁에 두는 나만의 운명 지도 — 본 서비스는 명리학 기반 참고용 엔터테인먼트 콘텐츠입니다.</p>
 </div></section>
 
 <section class="sec apply" id="apply"><div class="wrap">
   <div class="stitle" data-rv>
-    <p class="k">APPLY</p>
-    <h2>사주 분석 신청하기</h2>
-    <p>정보를 입력해 신청하시면, 결제 안내 후 <b class="gold">24시간 이내</b>에 리포트를 보내드립니다</p>
+    <p class="k"><span class="pc-only">APPLY</span><span class="m-only ch">07 · 신청</span></p>
+    <h2><span class="pc-only">사주 분석 신청하기</span><span class="m-only">이제, 내 흐름을<br><span class="gold-t">읽어볼 차례</span>예요</span></h2>
+    <p class="m-only">입금 확인 후 <b class="gold">24시간</b> 안에 보내드려요</p>
+    <p class="pc-only">정보를 입력해 신청하시면, 결제 안내 후 <b class="gold">24시간 이내</b>에 리포트를 보내드립니다</p>
   </div>
 
   <div class="card formwrap" id="formCard">
@@ -484,22 +494,27 @@
         <textarea name="궁금한점" rows="3" placeholder="예: 올해 이직운, 결혼 시기, 사업 시작 시기 등 — 적어주시면 분석에 비중 있게 반영됩니다."></textarea>
       </div>
 
-      <div class="notice">⚠️ <b>발송 전 꼭 확인해 주세요.</b> 입력하신 <b>이메일·연락처가 잘못되면 리포트를 보내드릴 수 없습니다.</b> 다시 한번 정확히 확인 후 신청해 주세요.</div>
-      <p class="ent">🔮 본 서비스는 <b class="lav">참고용 엔터테인먼트</b> 콘텐츠로, 결과는 확정된 미래가 아니며 의료·법률·투자·결혼 등 중요한 결정의 근거가 될 수 없습니다.</p>
+      <div class="notice m-only">⚠️ <b>이메일·연락처</b>를 한 번 더 확인해 주세요. 틀리면 보내드릴 수 없어요.</div>
+      <div class="notice pc-only">⚠️ <b>발송 전 꼭 확인해 주세요.</b> 입력하신 <b>이메일·연락처가 잘못되면 리포트를 보내드릴 수 없습니다.</b> 다시 한번 정확히 확인 후 신청해 주세요.</div>
+      <p class="ent m-only">🔮 <b class="lav">참고용 엔터테인먼트</b> 콘텐츠예요.</p>
+      <p class="ent pc-only">🔮 본 서비스는 <b class="lav">참고용 엔터테인먼트</b> 콘텐츠로, 결과는 확정된 미래가 아니며 의료·법률·투자·결혼 등 중요한 결정의 근거가 될 수 없습니다.</p>
 
       <label class="agree">
         <input type="checkbox" id="agree" required>
-        <span><b class="gold">[필수]</b> 개인정보 수집·이용에 동의합니다. 수집 항목(성함·생년월일시·성별·이메일·연락처)은 <b>사주 분석 및 결과 발송 목적</b>으로만 이용됩니다. 분석 원본자료는 발송 완료 후 지체 없이 파기하되, 대금결제·재화공급에 관한 기록은 「전자상거래법」에 따라 일정 기간 보관됩니다. 자세한 내용은 하단 <b>「개인정보처리방침」</b>을 확인해 주세요.</span>
+        <span><b class="gold">[필수]</b> <span class="ag-t m-only">개인정보 수집·이용 동의</span><span class="ag-full">개인정보 수집·이용에 동의합니다. 수집 항목(성함·생년월일시·성별·이메일·연락처)은 <b>사주 분석 및 결과 발송 목적</b>으로만 이용됩니다. 분석 원본자료는 발송 완료 후 지체 없이 파기하되, 대금결제·재화공급에 관한 기록은 「전자상거래법」에 따라 일정 기간 보관됩니다. 자세한 내용은 하단 <b>「개인정보처리방침」</b>을 확인해 주세요.</span></span>
+        <button type="button" class="ag-more m-only" aria-expanded="false">내용</button>
       </label>
 
       <label class="agree">
         <input type="checkbox" id="agreeWithdraw" required>
-        <span><b class="gold">[필수]</b> 본 서비스는 결제 완료 후 <b>AI 분석이 즉시 시작되는 디지털 콘텐츠</b>이며, 「전자상거래법」 제17조 제2항 제5호에 따라 <b>분석 결과(리포트) 제공 이후에는 청약철회가 제한</b>됨을 확인했습니다. (분석 시작 전·결제일로부터 7일 이내에는 전액 환불이 가능합니다. 자세한 내용은 하단 「청약철회 및 환불 규정」 참고)</span>
+        <span><b class="gold">[필수]</b> <span class="ag-t m-only">결제 후 청약철회 제한 확인</span><span class="ag-full">본 서비스는 결제 완료 후 <b>AI 분석이 즉시 시작되는 디지털 콘텐츠</b>이며, 「전자상거래법」 제17조 제2항 제5호에 따라 <b>분석 결과(리포트) 제공 이후에는 청약철회가 제한</b>됨을 확인했습니다. (분석 시작 전·결제일로부터 7일 이내에는 전액 환불이 가능합니다. 자세한 내용은 하단 「청약철회 및 환불 규정」 참고)</span></span>
+        <button type="button" class="ag-more m-only" aria-expanded="false">내용</button>
       </label>
 
       <label class="agree" id="agreePartnerBox" style="display:none">
         <input type="checkbox" id="agreePartner">
-        <span><b class="gold">[필수]</b> <b>본인이 아닌 제3자(상대방·자녀 등)의 개인정보</b>를 입력함에 있어, 해당 정보주체 본인(또는 법정대리인)의 <b>동의를 받았음을 확인</b>합니다. 입력된 제3자 정보는 이 분석 목적 외로 이용되지 않습니다.</span>
+        <span><b class="gold">[필수]</b> <span class="ag-t m-only">제3자(상대방·자녀) 정보 입력 동의 확인</span><span class="ag-full"><b>본인이 아닌 제3자(상대방·자녀 등)의 개인정보</b>를 입력함에 있어, 해당 정보주체 본인(또는 법정대리인)의 <b>동의를 받았음을 확인</b>합니다. 입력된 제3자 정보는 이 분석 목적 외로 이용되지 않습니다.</span></span>
+        <button type="button" class="ag-more m-only" aria-expanded="false">내용</button>
       </label>
 
       <button type="submit" class="btn btn-gold btn-block">신청 접수하기</button>
@@ -534,7 +549,7 @@
 
 <section class="sec faq-sec" id="faq"><div class="wrap">
   <div class="stitle" data-rv>
-    <p class="k">FAQ</p>
+    <p class="k"><span class="pc-only">FAQ</span><span class="m-only ch">궁금한 점</span></p>
     <h2>자주 묻는 질문</h2>
   </div>
   <div class="faq">
@@ -549,11 +564,12 @@
 
 <section class="sec contact" id="contact"><div class="wrap">
   <div class="stitle" data-rv>
-    <p class="k">CONTACT</p>
+    <p class="k"><span class="pc-only">CONTACT</span><span class="m-only ch">문의</span></p>
     <h2>담당자 문의하기</h2>
   </div>
   <div class="card contact-card" data-rv>
-    <p>궁금한 점이나 신청·입금 확인은 <b class="gold">카카오톡 채널</b>로 편하게 문의해 주세요.<br>입금 후 채널로 메시지를 남겨주시면 더 빠르게 처리해 드립니다.</p>
+    <p class="m-only">궁금한 건 <b class="gold">카톡</b>으로 편하게 물어보세요.</p>
+    <p class="pc-only">궁금한 점이나 신청·입금 확인은 <b class="gold">카카오톡 채널</b>로 편하게 문의해 주세요.<br>입금 후 채널로 메시지를 남겨주시면 더 빠르게 처리해 드립니다.</p>
     <a href="http://pf.kakao.com/_gdCGX" target="_blank" rel="noopener" class="kakao-btn">💬 카카오톡 채널 문의하기</a>
   </div>
 </div></section>

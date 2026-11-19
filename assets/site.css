@@ -368,8 +368,85 @@ input[type=checkbox] { width: 18px; height: 18px; min-height: 0; padding: 0; fle
 .mbar-go small { font-size: 10.5px; font-weight: 600; opacity: .8; }
 .mbar-go b { font-size: 15px; }
 
+/* ── 휴대폰 전용: 스토리 챕터 + 핵심 단어만 (11-19 사용자 「모바일은 글이 너무 많아, 핵심 단어·후킹 문구만, 스토리형으로」) ──
+   기준 한 곳 719.98px — 짧은 문구는 HTML 의 .m-only, PC 문구는 .pc-only */
+@media (max-width: 719.98px) {
+  .pc-only { display: none !important; }
+  .sec { padding: 66px 0; }
+  .sec:not(.stats)::before { content: ""; position: absolute; left: 50%; top: 0; width: 1px; height: 42px; background: linear-gradient(transparent, rgba(232, 197, 122, .6)); }
+  .ch { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 10px; border-radius: 99px; border: 1px solid var(--line-2); background: rgba(232, 197, 122, .07);
+    color: var(--gold-hi); font: 700 12px var(--sans); letter-spacing: .04em; }
+  .ch::before { content: "✦"; font-size: 10px; color: var(--gold); }
+  .k, .cf-head small { letter-spacing: normal; padding-left: 0; }
+  .stitle { margin-bottom: 24px; }
+  .stitle h2, .cf-head h2 { margin-top: 14px; font-size: 26px; line-height: 1.42; }
+  .stitle > p.m-only { margin-top: 8px; color: var(--mist); font-size: 14px; }
+  /* 첫 화면 */
+  h1 { font-size: 30px; }
+  .cta-row { margin-top: 26px; }
+  /* 01 요즘 당신 */
+  .cf-list { grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 22px 0 30px; }
+  .cf-card { flex-direction: column; justify-content: center; text-align: center; gap: 10px; padding: 18px 6px; }
+  .cf-key { font-size: 13.5px; line-height: 1.45; color: var(--ink); font-weight: 700; }
+  .cf-m { margin: 14px 0 22px; color: var(--mist); font-size: 15px; line-height: 1.75; }
+  /* 02 내 띠 */
+  .ddi-hook { font-size: 15.5px; margin: 16px auto; }
+  /* 03 내 리포트: 한자 타일, 누르면 한 줄 설명 */
+  .parts { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .part { padding: 12px 0 10px; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background .25s, border-color .25s; }
+  .part .p-no, .part h3, .part p { display: none; }
+  .part .p-han { position: static; display: block; font-size: 27px; line-height: 1.15; color: var(--gold-hi); opacity: .9; }
+  .part.in .p-han { animation: none; }
+  .p-key { display: block; margin-top: 3px; font-size: 12px; font-weight: 600; color: var(--mist); }
+  .part.sel { background: linear-gradient(160deg, rgba(232, 197, 122, .24), rgba(232, 197, 122, .06)); border-color: var(--gold); }
+  .part.sel .p-key { color: var(--gold-hi); }
+  .part-say { margin-top: 12px; padding: 14px 16px; min-height: 78px; border-radius: 14px; background: var(--card-2); border: 1px solid var(--line-2); text-align: center; }
+  .part-say b { font-family: var(--serif); font-size: 16px; color: var(--gold-hi); }
+  .part-say p { margin-top: 4px; color: var(--mist); font-size: 13.5px; line-height: 1.6; }
+  /* 숫자: 제목 없이 이어짐 */
+  .stats { padding: 0 0 18px; }
+  .ssub { display: none; }
+  /* 04 후기: 한 줄만, 세 줄까지 */
+  .rev-row.r2 { display: none; }
+  .rev { width: 240px; }
+  .rtext { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  /* 05 받는 법: 4칸 한 줄 */
+  .steps { grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: none; }
+  .steps::before { left: 12.5%; right: 12.5%; top: 21px; bottom: auto; width: auto; height: 2px; background: linear-gradient(90deg, var(--gold), rgba(185, 166, 255, .6)); }
+  .step { flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+  .step > div { padding: 0; background: none; border: 0; }
+  .step h3 { font-size: 13px; line-height: 1.4; }
+  .step p { display: none; }
+  /* 06 가격: 프리미엄은 핵심 단어, 나머지는 한 줄 */
+  .plans { gap: 10px; }
+  .plan ul, .pnote { display: none; }
+  .p-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 16px; }
+  .p-chips span { padding: 4px 10px; border-radius: 99px; background: rgba(232, 197, 122, .12); border: 1px solid var(--line-2); color: var(--gold-hi); font-size: 12px; font-weight: 600; }
+  .plan:not(.feat) { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; padding: 16px 18px; }
+  .plan:not(.feat) h3 { font-size: 17px; }
+  .plan:not(.feat) .pr { grid-column: 2; grid-row: 1 / span 2; margin: 0; font-size: 24px; }
+  .plan:not(.feat) .pr small { font-size: 12px; }
+  .plan:not(.feat) .p-one { grid-column: 1; margin-top: 2px; color: var(--mut); font-size: 12.5px; }
+  .plan:not(.feat) .btn { grid-column: 1 / -1; margin-top: 12px; min-height: 44px; font-size: 14px; }
+  /* 07 신청: 동의는 제목만, 「내용」을 누르면 전문 */
+  .hint-mist { display: none; }
+  .agree { align-items: center; }
+  .agree > span { flex: 1; }
+  .ag-t { color: var(--ink); font-weight: 600; font-size: 13.5px; }
+  .ag-full { display: none; }
+  .agree.open .ag-full { display: block; margin-top: 8px; }
+  .ag-more { flex: none; align-self: flex-start; padding: 4px 11px; border-radius: 99px; border: 1px solid var(--line-2); background: none; color: var(--gold-hi); font: 600 12px var(--sans); cursor: pointer; }
+  /* 읽는 만큼 차오르는 금빛 줄(지원하는 브라우저만) */
+  @supports (animation-timeline: scroll()) {
+    .nav::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--gold-lo), var(--gold-hi));
+      transform-origin: left; transform: scaleX(0); animation: readProg linear both; animation-timeline: scroll(root); }
+    @keyframes readProg { to { transform: scaleX(1); } }
+  }
+}
+
 /* ── 넓은 화면 ───────────────────────────────────────── */
 @media (min-width: 720px) {
+  .m-only { display: none !important; }
   .cf-list { grid-template-columns: repeat(3, 1fr); }
   .cf-card { flex-direction: column; text-align: center; padding: 22px 18px; }
   .parts { grid-template-columns: repeat(3, 1fr); }
